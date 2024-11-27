@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Dangrek&family=Rubik+Bubbles&display=swap');
+
+.rubik-bubbles-regular {
+  font-family: "Rubik Bubbles", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.dangrek-regular {
+  font-family: "Dangrek", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  width: 100%;
+  background: #fff;
+  font-size: 1.5rem;
+  color: #333;
+  font-family: "Dangrek";
+}
+h2 {
+  font-family: "Rubik Bubbles";
+  color: palevioletred;
+  text-align: center;
+  font-size: 5rem;
+  padding: 80px 0;
+}
+h4 {
+  font-size: 2rem;
+  font-family: "Dangrek";
+  color: palevioletred;
+}
+p {
+  margin-bottom: 10px;
+}
+#bestseller {
+  width: 100%;
+}
+#bestseller_box {
+  width: 80%;
+  margin: 0 auto;
+}
+#bestseller_box ul {
+  text-align: center;
+  margin-bottom: 100px;
+}
+#bestseller_box ul li {
+  box-sizing: content-box;
+  width: 50%;
+  float: left;
+  display: none;
+  border: 5px solid palevioletred;
+  border-radius: 5px;
+  background: #fff;
+  margin: -5px;
+  position: relative;
+}
+#bestseller_box ul li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: palevioletred;
+  opacity: 0;
+}
+#bestseller_box ul li:hover::before {
+  opacity: .2;
+  cursor: pointer;
+}
+#bestseller_box ul li img {
+  width: 100%;
+}
+.more_btn {
+  margin-top: -30px;
+  margin-bottom: 100px;
+  display: block;
+}
+.more_btn button {
+  text-align: center;
+  margin: 0 auto;
+  width: 150px;
+  background: palevioletred;
+  color: #fff;
+  font-family: "Dangrek";
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px 0;
+  display: block;
+  border: 5px solid palevioletred;
+}
+.more_btn button:hover {
+  text-align: center;
+  margin: 0 auto;
+  width: 150px;
+  background: #fff;
+  color: palevioletred;
+  font-family: "Dangrek";
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px 0;
+  display: block;
+  border: 5px solid palevioletred;
+}
+
+@media screen and (min-width:641px) and (max-width:968px) {
+  #bestseller_box ul li {
+    width: 33.33%;
+    float: left;
+  }
+  #bestseller_box img {
+    max-width: 250px;
+  }
+  h2 {
+    font-size: 6rem;
+  }
+}
+
+@media screen and (min-width:969px) {
+  #bestseller_box ul li {
+    width: 25%;
+    float: left;
+    
+  }
+  h2 {
+    font-size: 8rem;
+  }
+}
